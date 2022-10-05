@@ -4,11 +4,15 @@ import Calendar from 'react-calendar';
 import './App.css';
 import 'react-calendar/dist/Calendar.css';
 import ToDoList from './ToDoList';
+import Card from './Card';
+import EntryForm from './EntryForm';
 
 function App() {
   const [date, setDate] = useState(new Date());
   const [toDoList, setToDoList] = useState([])
 
+  
+  
   const appStyles = {
     backgroundColor: "rgb(165, 109, 36)",
     textAlign: "center",
@@ -38,7 +42,9 @@ useEffect(()=>{
         </p>
       </div>
       {toDoList.map((toDoList)=>{
-       return <ToDoList {...toDoList}/>})}
+       return <Card  key={toDoList.id} activity={toDoList.activity} duration={toDoList.duration}/>})}
+       <ToDoList />
+       <EntryForm />
     </div>
   );
 }
