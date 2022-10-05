@@ -4,6 +4,7 @@ import Calendar from 'react-calendar';
 import './App.css';
 import 'react-calendar/dist/Calendar.css';
 import ToDoList from './ToDoList';
+import EntryForm from './EntryForm';
 
 
 function App() {
@@ -13,25 +14,31 @@ const appStyles = {
     backgroundColor: "rgb(165, 109, 36)",
     textAlign: "center",
     padding: "20px",
-    fontSize: "larger"
-  }
-  const calStyles = {
-    float: "left"
+    fontSize: "larger",
+    height: "100vh"
   }
  
-return (
-    <div className='app' style={appStyles}>
-      <div className='calendar-container'style={calStyles} >
-      <h2 className='text-center'>My Calendar</h2>
-      <Calendar onChange={setDate} value={date} />
-        <p className='text-center'>
-        <span className='bold'> Today: </span>{' '}
-        {date.toDateString()}
-        </p>
+  return (
+    <div className="flex-container" style={appStyles}>
+      <div className="flex-item">
+        <div className="calendar-container">
+          <h2 className="text-center">My Calendar</h2>
+
+          <Calendar onChange={setDate} value={date} />
+
+          <p className="text-center">
+            <span className="bold"> Today: </span> {date.toDateString()}
+          </p>
+        </div>
       </div>
-       <ToDoList />
-    </div>
-  );
+      <div className="flex-item">
+        <ToDoList />
+      </div>
+      <div className="flex-item">
+        <EntryForm />
+      </div>
+      </div>
+  )
 }
 
 export default App;
