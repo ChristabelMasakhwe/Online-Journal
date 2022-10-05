@@ -1,15 +1,20 @@
 import React from 'react';
-import Card from './Card'
 
-function ToDoItem({ToDo, onDelete, onClick}) {
-
-  return(
-    <div className="listItem">
-        {ToDo.map((ToDo) => {
-          return <Card key={ToDo.id} ToDo={ToDo} onDelete={onDelete} onClick={onClick}/>})}
-    </div>
-  )  
-
-}
-
-export default ToDoItem;
+export default ToDoItem;function ToDoItem({ todo, onDelete, toggleComplete }) {
+    return (
+      <div>
+        <span>{todo.activity}</span>
+        <span>{todo.duration}</span>
+        <span>
+          <button onClick={() => onDelete(todo.id)}>x</button>
+        </span>
+        <span>
+          <input
+            type="checkbox"
+            id="completed"
+            checked={todo.completed}
+            onChange={() => toggleComplete(todo.id)}
+          />
+        </span>
+      </div>
+    )}
