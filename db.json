@@ -1,5 +1,5 @@
 {
-    "WeekDays":[
+    "ToDo":[
         {
             "id":1,
             "duration":"2 hours",
@@ -24,35 +24,16 @@
             "id":5,
             "duration":"4 hours",
             "activity":"Unwind, Read a book, Watch a movie, cook, social-Media"
-        }
-    ],
-    "Saturday":[
-        {
-            "id":1,
-            "duration":"3 hours",
-            "activity":"meditation, Work-Out and journalling"
         },
         {
-            "id":2,
+            "id":6,
             "duration":"1 hour",
-            "activity":"Clean-up"
+            "activity":"Study and Research"
         },
         {
-            "id":3,
-            "duration":"8 hours",
-            "activity":"Prepare and go out"
-        },
-        {
-            "id":4,
-            "duration":"3 hours",
-            "activity":"Unwind, Read a book, Watch a movie, cook, social-Media"
-        }
-    ],
-    "Sunday":[
-        {
-            "id":1,
-            "duration":"1 hours",
-            "activity":"Prepare and go to church"   
+            "id":7,
+            "duration":"6 hours",
+            "activity":"Rest" 
         }
     ]
 }
