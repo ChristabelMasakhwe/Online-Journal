@@ -1,13 +1,13 @@
 
 import React, { useState, useEffect } from "react";
-import { EntryList } from "./EntryList";
+import EntryList from "./EntryList";
 
-export function EntryForm() {
+function EntryForm() {
   const [entries, setEntries] = useState([]);
   const [story, setStory] = useState("");
 
   const getEntries = async () => {
-    const myentries = await fetch("http://localhost:8000/entries").then((r) =>
+    const myentries = await fetch("http://localhost:8000/entry").then((r) =>
       r.json()
     );
     setEntries(myentries);
@@ -28,7 +28,7 @@ export function EntryForm() {
       date: new Date().toLocaleDateString(),
       content: story,
     };
-    fetch("http://localhost:8000/entries", {
+    fetch("http://localhost:8000/entry", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(entry),
@@ -58,7 +58,7 @@ export function EntryForm() {
           <input
             type="text"
             name="entry"
-            placeholder="entry"
+            placeholder="Type it away..."
             value={story}
             onChange={handleChange}
           />

@@ -15,11 +15,12 @@ const appStyles = {
     textAlign: "center",
     padding: "20px",
     fontSize: "larger",
-    height: "100vh"
+    height: "150vh"
   }
  
   return (
     <div className="flex-container" style={appStyles}>
+      <h2 style={{fontSize: "small"}}>MY JOURNAL</h2>
       <div className="flex-item">
         <div className="calendar-container">
           <h2 className="text-center">My Calendar</h2>

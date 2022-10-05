@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import ToDoItem from './ToDoItem';
-import { AddTodo } from "./AddTodo";
+import AddTodo from "./AddTodo";
 
 
 function ToDoList() {
@@ -43,9 +43,7 @@ function ToDoList() {
         setToDos(updatedTodos);
       }
       
-    
-
-  function handleAddToDo(e) {
+    function handleAddToDo(e) {
     e.preventDefault();
     const todo = { activity, duration, completed: false };
     fetch("http://localhost:8000/ToDo", {
@@ -70,9 +68,7 @@ function ToDoList() {
     color: "rgb(165, 109, 36)",
   };
       
-   
-  
-  return (
+   return (
     <div style={cardStyles1}>
        <h2>TODO LIST</h2>
       <ul>

@@ -1,13 +1,13 @@
 import React from 'react';
 
-export default ToDoItem;function ToDoItem({ todo, onDelete, toggleComplete }) {
+function ToDoItem({ todo, onDelete, toggleComplete }) {
     return (
       <div>
-        <span>{todo.activity}</span>
-        <span>{todo.duration}</span>
+        <span>{todo.activity}</span>{'   '}
+        <span> *{todo.duration}* </span>{'   '}
         <span>
           <button onClick={() => onDelete(todo.id)}>x</button>
-        </span>
+        </span>{' '}
         <span>
           <input
             type="checkbox"
@@ -18,3 +18,5 @@ export default ToDoItem;function ToDoItem({ todo, onDelete, toggleComplete }) {
         </span>
       </div>
     )}
+
+    export default ToDoItem;

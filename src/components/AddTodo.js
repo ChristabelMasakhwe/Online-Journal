@@ -1,4 +1,4 @@
-export const AddTodo = (props) => {
+const AddTodo = (props) => {
     const activity = props.activity;
     const duration = props.duration
     const setActivity = props.setActivity;
@@ -32,3 +32,5 @@ export const AddTodo = (props) => {
       </div>
     );
   };
+
+  export default AddTodo;

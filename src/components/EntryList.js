@@ -1,14 +1,15 @@
 import React from "react";
-import { EntryItem } from "./EntryItem";
+import  EntryItem  from "./EntryItem";
 
-export const EntryList = (props) => {
-  const entries = props.entries;
-
+const EntryList = ({entries}) => {
+ 
   return (
     <div>
-      {entries.map((entry) => {
-        return <EntryItem key={entry.id} entry={entry} />;
+   {entries.map((entry) => {
+        return <EntryItem key={entry.id} entry={entry} />
       })}
-    </div>
-  );
+   </div>
+  )
 };
+
+export default EntryList;

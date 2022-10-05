@@ -1,4 +1,6 @@
-export const EntryItem = (props) => {
+import React from "react";
+
+const EntryItem = (props) => {
     const entry = props.entry;
     return (
       <div>
@@ -7,3 +9,5 @@ export const EntryItem = (props) => {
       </div>
     );
   };
+
+  export default EntryItem;
