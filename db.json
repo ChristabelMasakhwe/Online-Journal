@@ -1,39 +1,44 @@
 {
-    "ToDo":[
-        {
-            "id":1,
-            "duration":"2 hours",
-            "activity":"Meditation and Work-Out"
-        },
-        {
-            "id":2,
-            "duration":"1 hour",
-            "activity":"Prepare for work"
-        },
-        {
-            "id":3,
-            "duration":"9 hours",
-            "activity":"Spend the day at the workplace"   
-        },
-        {
-            "id":4,
-            "duration":"1 hour",
-            "activity":"Refresh and meditate after work"
-        },
-        {
-            "id":5,
-            "duration":"4 hours",
-            "activity":"Unwind, Read a book, Watch a movie, cook, social-Media"
-        },
-        {
-            "id":6,
-            "duration":"1 hour",
-            "activity":"Study and Research"
-        },
-        {
-            "id":7,
-            "duration":"6 hours",
-            "activity":"Rest" 
-        }
-    ]
+  "ToDo": [
+    {
+      "id": 1,
+      "duration": "2 hours",
+      "activity": "Meditation and Work-Out"
+    },
+    {
+      "id": 2,
+      "duration": "1 hour",
+      "activity": "Prepare for work"
+    },
+    {
+      "id": 3,
+      "duration": "9 hours",
+      "activity": "Spend the day at the workplace"
+    },
+    {
+      "id": 4,
+      "duration": "1 hour",
+      "activity": "Refresh and meditate after work"
+    },
+    {
+      "id": 5,
+      "duration": "4 hours",
+      "activity": "Unwind, Read a book, Watch a movie, cook, social-Media"
+    },
+    {
+      "id": 6,
+      "duration": "1 hour",
+      "activity": "Study and Research"
+    },
+    {
+      "id": 7,
+      "duration": "6 hours",
+      "activity": "Rest"
+    },
+    {
+      "activity": "Finish Project",
+      "duration": "2 hours",
+      "id": 8
+    }
+  ]
 }

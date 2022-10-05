@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Card from './Card';
 
 function EntryForm() {
     const [addStory, setAddStory] = useState("")
@@ -15,7 +16,7 @@ const handleSubmit = (e) =>{
 
     return(
         <div className="form-container">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} >
                 <div>
                     <input 
                     type="text"

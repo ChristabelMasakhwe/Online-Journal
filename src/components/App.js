@@ -1,19 +1,15 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import './App.css';
 import 'react-calendar/dist/Calendar.css';
 import ToDoList from './ToDoList';
-import Card from './Card';
-import EntryForm from './EntryForm';
+
 
 function App() {
   const [date, setDate] = useState(new Date());
-  const [toDoList, setToDoList] = useState([])
-
-  
-  
-  const appStyles = {
+ 
+const appStyles = {
     backgroundColor: "rgb(165, 109, 36)",
     textAlign: "center",
     padding: "20px",
@@ -23,15 +19,7 @@ function App() {
     float: "left"
   }
  
-
-useEffect(()=>{
-    fetch("http://localhost:3000/ToDo")
-    .then((r)=> r.json())
-    .then((toDoList)=> setToDoList(toDoList))
-}, []);
-
-
-  return (
+return (
     <div className='app' style={appStyles}>
       <div className='calendar-container'style={calStyles} >
       <h2 className='text-center'>My Calendar</h2>
@@ -41,10 +29,7 @@ useEffect(()=>{
         {date.toDateString()}
         </p>
       </div>
-      {toDoList.map((toDoList)=>{
-       return <Card  key={toDoList.id} activity={toDoList.activity} duration={toDoList.duration}/>})}
        <ToDoList />
-       <EntryForm />
     </div>
   );
 }

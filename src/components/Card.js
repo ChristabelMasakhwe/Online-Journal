@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card(props) {
+function Card({ToDo, onDelete, onClick}) {
 
     const cardStyles1 = {
         marginLeft: "100px",
@@ -24,18 +24,41 @@ function Card(props) {
         position: "relative",
         display: "flex"
     }
+
+    
+    function handleDeleteToDo() {
+      fetch(`http://localhost:3000/ToDo/${ToDo.id}`, {
+        method: "DELETE",
+      })
+        .then((r) => r.json())
+        .then(() => onDelete(ToDo));
+    }
+
+
     return(
 <div className="px-5 my-5 align-items-center">
         <div className="align-items-center">
           <div className="column text-center">
             <div className="container" >
               <div className="column align-items-md-stretch">
-                <div className="col-md-6"style={cardStyles1} key={props.id}>
+                <div className="col-md-6"style={cardStyles1} key={ToDo.id}>
                   <div className="h-100 p-5 text-white bg-dark rounded-3">
                     <h2>TODO LIST</h2>
                     <ol>
-                    <li>{props.activity}<span>{props.duration}</span></li>
-                      </ol>
+                      <li>{ToDo.activity}<br/><span>*{ToDo.duration}*</span><br/>
+                      <button
+                        className="ui mini red button"
+                        onClick={handleDeleteToDo}>
+                              x
+                          </button>
+                         <input
+                             type="checkbox"
+                              id="completed"
+                              checked={ToDo.completed}
+                            onChange={() => onClick(ToDo.id)}
+                            />
+                      </li>
+                    </ol>
                   </div>
                 </div>
                 <div className="col-md-6" style={cardStyles2}>
